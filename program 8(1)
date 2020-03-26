@@ -1,0 +1,42 @@
+//Save as student.java
+package MCA;
+import java.util.*;
+public class student
+{int o,y,t=0,i;
+double p;
+String n;
+int r[]=new int [50];
+public student(int rollno,String name)
+{
+y=rollno;
+n=name;
+System.out.println("Enter no of subject");
+Scanner s = new Scanner(System.in);
+o=s.nextInt();
+System.out.println("enter marks");
+for(i=0;i<o;i++)
+{
+ System.out.println("Sub :"+(i+1));
+ r[i]=s.nextInt();
+}
+for(i=0;i<o;i++)
+{
+t=t+r[i];
+}
+System.out.println(" "+t);
+p=(t*100)/(o*100.0);
+}
+public void display()
+{
+System.out.println("<========RESULT========>");
+System.out.print("Name :"+n);
+System.out.println("      Roll No :"+y);
+for(i=0;i<o;i++)
+{
+ System.out.print("Sub :"+(i+1));
+ System.out.println("  "+r[i]);
+}
+System.out.print("Total Marks: "+t);
+System.out.print("        Percentage "+p+"%");
+}
+}
