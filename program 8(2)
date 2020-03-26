@@ -1,0 +1,17 @@
+//save as e.java
+import java.util.*;
+import MCA.student;
+class e
+{
+public static void main(String []args)
+{
+String a;int b;
+Scanner s =new Scanner(System.in);
+System.out.println("enter Name");
+a=s.nextLine();
+System.out.println("enter Roll no");
+b=s.nextInt();
+student t =new student(b,a);
+t.display();
+}
+}
